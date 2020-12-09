@@ -1,4 +1,13 @@
 // TODO1: Fetch the time and date for heading from moment.js
+//Fetch the currentDay element
+currentDay = $("#currentDay");
+
+day = moment().format("dddd") // => ('Monday' , 'Tuesday' ----)
+date = moment().format("Do")
+month = moment().format("MMMM") // => ('January','February.....)
+year = moment().format("YYYY") // => ('2012','2013' ...)  
+
+currentDay.text(day + " " + date + " " + month + " " + year)
 
 
 // TODO2: Build Array to store the data of the planner length 9
