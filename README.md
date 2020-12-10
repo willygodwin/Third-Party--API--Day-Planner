@@ -5,4 +5,19 @@ During this task we were required to create a simple calendar application that a
 
 During the development of this application we used a third party API (Moment.js) to retrieve the necessary time elements including current time, current day of the week and current date. 
 
+Title Banner 
+
+![Alt text](/assets/screenshots/title.JPG?raw=true "title")
+
+Planner Pre Edit
+
+![Alt text](/assets/screenshots/planner.JPG?raw=true "planner")
+
+Planner Post Edit
+
+![Alt text](/assets/screenshots/planner-edited.JPG?raw=true "planner-edited")
+
+
+
+
 
