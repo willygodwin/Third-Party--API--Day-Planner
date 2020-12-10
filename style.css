@@ -57,6 +57,18 @@ textarea{
   color: white;
 }
 
+.timeBox {
+  /* color: white; */
+  display:table;
+  margin:0 auto;
+  }
+
+.timeDiv {
+  display: flex;
+  align-items: center;
+}
+
+
 .saveBtn {
   background-color: rgba(0, 143, 209, 0.589);
   color: linen;

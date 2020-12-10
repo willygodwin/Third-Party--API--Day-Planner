@@ -42,17 +42,15 @@ function populatePlanner(){
         rowDiv.addClass("plannerRow");
         rowDiv.attr("hour-index", hour)
 
-
-        // Start building Time box portion of row
+        // Timebox portion of the rows
          let timeDivCol = $("<div>");
-         timeDivCol.addClass("col-md-2");
+         timeDivCol.addClass("col-md-2 timeDiv");
 
-        // create timeBox element (contains time)
+        // create timeBox element containing times of day 
         const timeBoxSpn = $("<span>");
-        // can use this to get value
         timeBoxSpn.attr("class","timeBox");
         
-        // format hours for display
+        // Hours for display
         let displayHour = 0;
         let ampm = "";
         if (hour > 12) { 
@@ -70,9 +68,7 @@ function populatePlanner(){
         rowDiv.append(timeDivCol);
         timeDivCol.append(timeBoxSpn);
         
-
-        
-        // build row components
+        // build row  components
         let dailyPlanInput = $("<input>");
 
         dailyPlanInput.attr("hour-index", i);
@@ -93,7 +89,7 @@ function populatePlanner(){
 
         // START building save portion of row
         let saveDivCol = $("<div>");
-        saveDivCol.addClass("col-md-1");
+        saveDivCol.addClass("col-md-1 saveDiv");
 
         let saveBtn = $("<button>");
         saveBtn.attr("id","saveid-" + i);
