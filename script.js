@@ -54,11 +54,14 @@ function populatePlanner(){
         let displayHour = 0;
         let ampm = "";
         if (hour > 12) { 
-        displayHour = hour - 12;
-        ampm = "pm";
+          displayHour = hour - 12;
+          ampm = "pm";
+        } else if (hour === 12) {
+          displayHour = hour;
+          ampm = "pm"; 
         } else {
-        displayHour = hour;
-        ampm = "am";
+          displayHour = hour;
+          ampm = "am";
         }
 
         // populate timeBox with time
