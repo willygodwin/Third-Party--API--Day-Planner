@@ -140,7 +140,5 @@ $(document).on("click", "button", function(event){
   localStorage.setItem("todoStored", JSON.stringify(plansArray));
   });  
 
-
-
 populatePlanner();
 
