@@ -99,7 +99,7 @@ function populatePlanner(){
         // add col width and row component to row
         rowDiv.append(saveDivCol);
         saveDivCol.append(saveBtn);
-        
+
 
         plansContainer.append(rowDiv);
 
