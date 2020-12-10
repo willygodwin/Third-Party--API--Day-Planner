@@ -17,7 +17,6 @@ currentDay.text(day + " " + date + " " + month + " " + year)
 // Fetch the stored plans from localStorage
 let todoStored = JSON.parse(localStorage.getItem("todoStored"));
 
-
 if (todoStored !== null) {
     plansArray = todoStored;
   } else {
@@ -36,21 +35,21 @@ function populatePlanner(){
 
         let hour = i + 9;
 
-        //Build row elements
+        //Build all the row elements
         let rowDiv = $("<div>"); 
         rowDiv.addClass("row");
         rowDiv.addClass("plannerRow");
         rowDiv.attr("hour-index", hour)
 
-        // Timebox portion of the rows
+        // creat a div to store the times of the working day 
          let timeDivCol = $("<div>");
          timeDivCol.addClass("col-md-2 timeDiv");
 
-        // create timeBox element containing times of day 
+        // create span within the div 
         const timeBoxSpn = $("<span>");
         timeBoxSpn.attr("class","timeBox");
         
-        // Hours for display
+        // Edit the display of the hours
         let displayHour = 0;
         let ampm = "";
         if (hour > 12) { 
@@ -64,14 +63,14 @@ function populatePlanner(){
           ampm = "am";
         }
 
-        // populate timeBox with time
+        // populate time display with suitable
         timeBoxSpn.text(displayHour + " " + ampm);
 
-        // insert into col inset into timebox
+        // append the the time div to the current row
         rowDiv.append(timeDivCol);
         timeDivCol.append(timeBoxSpn);
         
-        // build row  components
+        // Build input section of the row 
         let dailyPlanInput = $("<input>");
 
         dailyPlanInput.attr("hour-index", i);
@@ -85,12 +84,12 @@ function populatePlanner(){
         let inputDivCol = $("<div>");
         inputDivCol.addClass("col-md-9");
     
-        // add col width and row component to row
+        // Append the input and div to the row
         rowDiv.append(inputDivCol);
         inputDivCol.append(dailyPlanInput);
         
 
-        // START building save portion of row
+        // Build save portion of the row
         let saveDivCol = $("<div>");
         saveDivCol.addClass("col-md-1 saveDiv");
 
