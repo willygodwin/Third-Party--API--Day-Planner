@@ -89,7 +89,7 @@ function populatePlanner(){
         // add col width and row component to row
         rowDiv.append(inputDivCol);
         inputDivCol.append(dailyPlanInput);
-        // STOP building Time box portion of row
+        
 
         // START building save portion of row
         let saveDivCol = $("<div>");
